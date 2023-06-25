@@ -1,5 +1,8 @@
 from flask import Flask,render_template
-
+from flask_wtf import FlaskForm
+from wtforms import StringField,SubmitField
+from wtforms.validators import data_required
+ 
 app=Flask(__name__)
 @app.route('/')
 
@@ -20,11 +23,4 @@ def Page_notFound(e):
 @app.errorhandler(500)
 def Internal_Error(e):
     return render_template("500.html"),500
-
-
-
-# app.config['TEMPLATES_AUTO_RELOAD'] = True
-
-# if __name__ == '__main__':
-#     app.run(debug=True)
 
