@@ -6,7 +6,7 @@ app=Flask(__name__)
 def index():
     first_name="KAVIN"
     names="This is safe usage"
-    favourite_things=["Crazy","Stuffs","to","Play"]
+    favourite_things=["Crazy","Stuffs","to","Play",40,42]
     return render_template("index.html",First_name=first_name,safes=names,favourite_things=favourite_things)
 
 @app.route('/user/<name>')  
